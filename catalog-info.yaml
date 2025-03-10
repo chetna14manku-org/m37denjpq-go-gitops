@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: m37denjpq-go-gitops
+  description: This is GitOps manifest for m37denjpq-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=m37denjpq-go
+    backstage.io/kubernetes-id: m37denjpq-go 
+    backstage.io/techdocs-ref: dir:. 
+    github.com/project-slug: chetna14manku-org/m37denjpq-go-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:m37denjpq-go
